@@ -80,12 +80,13 @@ class AwesomeSnackbarContent extends StatelessWidget {
       horizontalPadding = size.width * 0.3;
     }
 
-    return Container(
+    return Center(
+      child: Container(
+         constraints: BoxConstraints(maxWidth: maxWidth ?? size.width),
       margin: EdgeInsets.symmetric(
         horizontal: horizontalPadding,
       ),
       height: size.height * 0.125,
-      width: maxWidth != null ? min(size.width, maxWidth!) : size.width,
       child: Stack(
         clipBehavior: Clip.none,
         alignment: Alignment.topCenter,
@@ -222,6 +223,7 @@ class AwesomeSnackbarContent extends StatelessWidget {
           )
         ],
       ),
+    ),
     );
   }
 
