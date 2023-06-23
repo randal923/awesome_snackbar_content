@@ -37,11 +37,15 @@ class AwesomeSnackbarContent extends StatelessWidget {
   /// if you want to customize the font size of the message
   final double? messageFontSize;
 
+  /// if you want to set a maximum width for the widget
+  final double? maxWidth;
+
   const AwesomeSnackbarContent({
     Key? key,
     this.color,
     this.titleFontSize,
     this.messageFontSize,
+    this.maxWidth,
     required this.title,
     required this.message,
     required this.contentType,
@@ -81,6 +85,7 @@ class AwesomeSnackbarContent extends StatelessWidget {
         horizontal: horizontalPadding,
       ),
       height: size.height * 0.125,
+      width: maxWidth != null ? min(size.width, maxWidth!) : size.width,
       child: Stack(
         clipBehavior: Clip.none,
         alignment: Alignment.topCenter,
