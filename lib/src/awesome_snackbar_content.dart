@@ -178,27 +178,27 @@ class AwesomeSnackbarContent extends StatelessWidget {
                               (!isMobile
                                   ? size.height * 0.03
                                   : size.height * 0.025),
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                           color: Colors.white,
                         ),
                       ),
                     ),
 
-                    InkWell(
-                      onTap: () {
-                        if (inMaterialBanner) {
-                          ScaffoldMessenger.of(context)
-                              .hideCurrentMaterialBanner();
-                          return;
-                        }
-                        ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                      },
-                      child: SvgPicture.asset(
-                        AssetsPath.failure,
-                        height: size.height * 0.022,
-                        package: 'awesome_snackbar_content',
-                      ),
-                    ),
+                    // InkWell(
+                    //   onTap: () {
+                    //     if (inMaterialBanner) {
+                    //       ScaffoldMessenger.of(context)
+                    //           .hideCurrentMaterialBanner();
+                    //       return;
+                    //     }
+                    //     ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                    //   },
+                    //   child: SvgPicture.asset(
+                    //     AssetsPath.failure,
+                    //     height: size.height * 0.022,
+                    //     package: 'awesome_snackbar_content',
+                    //   ),
+                    // ),
                   ],
                 ),
                 SizedBox(
