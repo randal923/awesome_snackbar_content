@@ -101,23 +101,23 @@ class AwesomeSnackbarContent extends StatelessWidget {
           ),
 
           /// Splash SVG asset
-          Positioned(
-            bottom: 0,
-            left: 0,
-            child: ClipRRect(
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-              ),
-              child: SvgPicture.asset(
-                AssetsPath.bubbles,
-                height: size.height * 0.06,
-                width: size.width * 0.05,
-                colorFilter:
-                    _getColorFilter(hslDark.toColor(), ui.BlendMode.srcIn),
-                package: 'awesome_snackbar_content',
-              ),
-            ),
-          ),
+          // Positioned(
+          //   bottom: 0,
+          //   left: 0,
+          //   child: ClipRRect(
+          //     borderRadius: const BorderRadius.only(
+          //       bottomLeft: Radius.circular(20),
+          //     ),
+          //     child: SvgPicture.asset(
+          //       AssetsPath.bubbles,
+          //       height: size.height * 0.06,
+          //       width: size.width * 0.05,
+          //       colorFilter:
+          //           _getColorFilter(hslDark.toColor(), ui.BlendMode.srcIn),
+          //       package: 'awesome_snackbar_content',
+          //     ),
+          //   ),
+          // ),
 
           // Bubble Icon
           Positioned(
